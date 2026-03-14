@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>moneasy プライバシーポリシー</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      color: #1d1d1f;
+      line-height: 1.8;
+      background: #fff;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #86868b;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e5e7;
+    }
+    p, li {
+      color: #3d3d3f;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    p { margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e5e7;
+      color: #86868b;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="en/">English</a>
+  </div>
+
+  <h1>プライバシーポリシー</h1>
+  <p class="subtitle">moneasy — かんたん家計簿アプリ</p>
+
+  <h2>1. はじめに</h2>
+  <p>moneasy（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人データの保護に努めます。本ポリシーでは、本アプリがどのようにデータを収集・利用・保護するかを説明します。</p>
+  <p>本アプリをご利用いただいた時点で、本ポリシーに同意したものとみなします。</p>
+
+  <h2>2. 収集するデータ</h2>
+  <p><strong>ローカルに保存されるデータ（開発者は収集しません）：</strong></p>
+  <ul>
+    <li>支出データ（金額、カテゴリ、日時、メモ、店名）</li>
+    <li>収入データ（金額、カテゴリ、日時）</li>
+    <li>予算設定、固定費設定</li>
+    <li>資産情報</li>
+    <li>レシート画像</li>
+    <li>カテゴリ学習ルール（店名→カテゴリの対応）</li>
+  </ul>
+  <p>これらのデータはすべてお使いのデバイス上に保存されます。開発者がこれらのデータにアクセスすることはありません。</p>
+
+  <p><strong>開発者が収集する可能性のあるデータ：</strong></p>
+  <ul>
+    <li>アプリのクラッシュ情報（エラー種別のみ。スタックトレースや個人データは含みません）</li>
+  </ul>
+
+  <h2>3. AI処理について</h2>
+  <p>本アプリのPro機能では、以下のAI処理を行います：</p>
+  <ul>
+    <li><strong>レシートOCR：</strong>レシート画像からテキストを抽出し、支出情報を構造化するためにGoogle Gemini Flash APIに送信されます。画像データはAPIでの処理のみに使用され、Googleに保存されることはありません。</li>
+    <li><strong>音声入力：</strong>音声から変換されたテキストデータを、支出情報を構造化するためにAI APIに送信します。音声データそのものは送信されません。</li>
+    <li><strong>AI月次レポート・カテゴリ推論：</strong>支出の概要データ（金額・カテゴリ名）をAI APIに送信し、分析結果を生成します。</li>
+  </ul>
+  <p>いずれの場合も、お名前・連絡先・住所などの個人を特定できる情報は送信されません。</p>
+
+  <h2>4. iCloud同期</h2>
+  <p>本アプリはApple CloudKitを使用して、ユーザーのiCloudアカウント間でデータを同期します。これはオプション機能であり、iCloudの設定からいつでも無効にできます。</p>
+  <p>家族共有機能をご利用の場合、共有データはApple CloudKitの公開データベースに暗号化されて保存されます。暗号鍵はCloudKitに保存されず、招待コードから導出されます。</p>
+
+  <h2>5. 第三者への提供</h2>
+  <p>ユーザーのデータを第三者に販売・提供することはありません。ただし、以下の場合を除きます：</p>
+  <ul>
+    <li>AI処理に必要なデータの送信（Google Gemini Flash API）</li>
+    <li>iCloud同期（Apple CloudKit）</li>
+    <li>法令に基づく開示要求があった場合</li>
+  </ul>
+
+  <h2>6. Cookieおよび広告</h2>
+  <p>本アプリはCookieを使用しません。また、広告を表示しません。サードパーティのトラッキングSDKは一切使用していません。</p>
+
+  <h2>7. データの削除</h2>
+  <p>ユーザーは以下の方法でデータを削除できます：</p>
+  <ul>
+    <li><strong>アカウント削除：</strong>設定 → 「アカウントを削除する」から、全てのデータ（支出・収入・レシート・カテゴリ設定等）を完全に削除できます。</li>
+    <li><strong>個別削除：</strong>各支出・収入データは個別に削除できます。</li>
+    <li><strong>アプリの削除：</strong>アプリを削除すると、デバイス上の全データが削除されます。</li>
+    <li><strong>iCloudデータ：</strong>iPhoneの設定 → Apple ID → iCloud → ストレージを管理 から削除できます。</li>
+  </ul>
+
+  <h2>8. データの保護</h2>
+  <ul>
+    <li>ローカルデータはAppleのデバイス暗号化により保護されます。</li>
+    <li>機密情報（認証トークン等）はiOS Keychainに安全に保存されます。</li>
+    <li>家族共有データはHKDF(SHA-256)で導出された暗号鍵で暗号化されます。</li>
+  </ul>
+
+  <h2>9. お子様のプライバシー</h2>
+  <p>本アプリは13歳未満のお子様を対象としていません。13歳未満のお子様から意図的に個人情報を収集することはありません。</p>
+
+  <h2>10. ポリシーの変更</h2>
+  <p>本ポリシーは必要に応じて更新されることがあります。重要な変更がある場合は、アプリ内でお知らせします。</p>
+
+  <h2>11. お問い合わせ</h2>
+  <p>本ポリシーに関するご質問やデータに関するご要望は、以下までご連絡ください。</p>
+  <p>メール：<a href="mailto:hetyako@gmail.com">hetyako@gmail.com</a></p>
+
+  <footer>
+    <p>最終更新日：2026年3月14日</p>
+    <p>&copy; 2026 moneasy</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>moneasy Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      color: #1d1d1f;
+      line-height: 1.8;
+      background: #fff;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #86868b;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e5e7;
+    }
+    p, li {
+      color: #3d3d3f;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    p { margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e5e7;
+      color: #86868b;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="../">日本語</a>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">moneasy — Simple Expense Tracker</p>
+
+  <h2>1. Introduction</h2>
+  <p>moneasy ("the App") respects your privacy and is committed to protecting your personal data. This policy explains how the App collects, uses, and protects your information.</p>
+  <p>By using the App, you agree to the terms of this Privacy Policy.</p>
+
+  <h2>2. Data We Collect</h2>
+  <p><strong>Data stored locally on your device (not collected by us):</strong></p>
+  <ul>
+    <li>Expense data (amount, category, date, notes, store name)</li>
+    <li>Income data (amount, category, date)</li>
+    <li>Budget and fixed expense settings</li>
+    <li>Asset information</li>
+    <li>Receipt images</li>
+    <li>Category learning rules (store-to-category mappings)</li>
+  </ul>
+  <p>All of this data is stored on your device. We do not have access to this data.</p>
+
+  <p><strong>Data we may collect:</strong></p>
+  <ul>
+    <li>App crash information (error type only; no stack traces or personal data)</li>
+  </ul>
+
+  <h2>3. AI Processing</h2>
+  <p>The App's Pro features use the following AI processing:</p>
+  <ul>
+    <li><strong>Receipt OCR:</strong> Receipt images are sent to the Google Gemini Flash API to extract and structure expense information. Images are processed in real-time and are not stored by Google.</li>
+    <li><strong>Voice Input:</strong> Text converted from speech is sent to AI APIs to structure expense information. Audio data itself is never sent.</li>
+    <li><strong>AI Monthly Reports &amp; Category Inference:</strong> Summary expense data (amounts and category names) is sent to AI APIs to generate analysis.</li>
+  </ul>
+  <p>In all cases, no personally identifiable information (name, contact details, address) is sent.</p>
+
+  <h2>4. iCloud Sync</h2>
+  <p>The App uses Apple CloudKit to sync data across your iCloud-connected devices. This is an optional feature that can be disabled in your iCloud settings.</p>
+  <p>If you use the Family Sharing feature, shared data is encrypted and stored in Apple CloudKit's public database. The encryption key is derived from the invitation code and is never stored in CloudKit.</p>
+
+  <h2>5. Third-Party Sharing</h2>
+  <p>We do not sell or share your data with third parties, except in the following cases:</p>
+  <ul>
+    <li>Data necessary for AI processing (Google Gemini Flash API)</li>
+    <li>iCloud sync (Apple CloudKit)</li>
+    <li>When required by law</li>
+  </ul>
+
+  <h2>6. Cookies and Advertising</h2>
+  <p>The App does not use cookies. The App does not display advertisements. No third-party tracking SDKs are used.</p>
+
+  <h2>7. Data Deletion</h2>
+  <p>You can delete your data in the following ways:</p>
+  <ul>
+    <li><strong>Account Deletion:</strong> Go to Settings &rarr; "Delete Account" to permanently delete all data (expenses, income, receipts, category settings, etc.).</li>
+    <li><strong>Individual Deletion:</strong> Each expense or income entry can be deleted individually.</li>
+    <li><strong>App Deletion:</strong> Deleting the app removes all local data from your device.</li>
+    <li><strong>iCloud Data:</strong> Go to iPhone Settings &rarr; Apple ID &rarr; iCloud &rarr; Manage Storage to delete synced data.</li>
+  </ul>
+
+  <h2>8. Data Security</h2>
+  <ul>
+    <li>Local data is protected by Apple's device encryption.</li>
+    <li>Sensitive information (authentication tokens) is securely stored in the iOS Keychain.</li>
+    <li>Family sharing data is encrypted using keys derived via HKDF(SHA-256).</li>
+  </ul>
+
+  <h2>9. Children's Privacy</h2>
+  <p>The App is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>This policy may be updated as needed. If significant changes are made, we will notify you within the App.</p>
+
+  <h2>11. Contact Us</h2>
+  <p>If you have questions about this policy or requests regarding your data, please contact us at:</p>
+  <p>Email: <a href="mailto:hetyako@gmail.com">hetyako@gmail.com</a></p>
+
+  <footer>
+    <p>Last updated: March 14, 2026</p>
+    <p>&copy; 2026 moneasy</p>
+  </footer>
+</body>
+</html>
