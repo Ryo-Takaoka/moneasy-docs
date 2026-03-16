@@ -90,14 +90,32 @@
   </ul>
   <p>Transmission destination: Google Cloud Functions (infrastructure for app management)<br>Purpose: Bug fixes and app quality improvement only. Not sold or shared with third parties.</p>
 
-  <h2>3. AI Processing</h2>
-  <p>The App's Pro features use the following AI processing:</p>
+  <h2>3. AI Processing and Third-Party Data Sharing</h2>
+  <p>The App's AI features send text data to the following third-party AI services. Use of AI features requires prior consent within the app.</p>
+
+  <p><strong>Data Recipients:</strong></p>
   <ul>
-    <li><strong>Receipt OCR:</strong> Receipt images are sent to the Google Gemini Flash API to extract and structure expense information. Images are processed in real-time and are not stored by Google.</li>
-    <li><strong>Voice Input:</strong> Text converted from speech is sent to AI APIs to structure expense information. Audio data itself is never sent.</li>
-    <li><strong>AI Monthly Reports &amp; Category Inference:</strong> Summary expense data (amounts and category names) is sent to AI APIs to generate analysis.</li>
+    <li><strong>Google LLC (Gemini API)</strong> — Primary text analysis processing (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</li>
+    <li><strong>Anthropic PBC (Claude API)</strong> — Backup text analysis processing (<a href="https://www.anthropic.com/privacy">Anthropic Privacy Policy</a>)</li>
   </ul>
-  <p>In all cases, no personally identifiable information (name, contact details, address) is sent.</p>
+
+  <p><strong>Data that IS sent:</strong></p>
+  <ul>
+    <li>Text extracted from receipts (amounts, item names, store names) — images themselves are NOT sent</li>
+    <li>Text converted from voice input — audio data itself is NOT sent</li>
+    <li>Store and item names used for category inference</li>
+    <li>Summary expense data (amounts, category names) for monthly report generation</li>
+  </ul>
+
+  <p><strong>Data that is NOT sent:</strong></p>
+  <ul>
+    <li>Receipt images (text extraction is performed on-device using Apple Vision Framework)</li>
+    <li>Audio data (speech-to-text conversion is performed on-device using Apple Speech Framework)</li>
+    <li>Your name, contact details, address, bank account, or other personally identifiable information</li>
+    <li>Historical expense data or asset information</li>
+  </ul>
+
+  <p>Transmitted data is used solely for structuring expense information (extracting amounts, categories, and store names). Neither Google nor Anthropic stores or uses the data for training purposes.</p>
 
   <h2>4. iCloud Sync</h2>
   <p>The App uses Apple CloudKit to sync data across your iCloud-connected devices. This is an optional feature that can be disabled in your iCloud settings.</p>
@@ -106,7 +124,7 @@
   <h2>5. Third-Party Sharing</h2>
   <p>We do not sell or share your data with third parties, except in the following cases:</p>
   <ul>
-    <li>Data necessary for AI processing (Google Gemini Flash API)</li>
+    <li>Text data necessary for AI processing (Google LLC Gemini API, Anthropic PBC Claude API)</li>
     <li>Error report transmission (Google Cloud Functions)</li>
     <li>iCloud sync (Apple CloudKit)</li>
     <li>When required by law</li>
@@ -142,7 +160,7 @@
   <p>Email: <a href="mailto:moneasy@sss3yai.com">moneasy@sss3yai.com</a></p>
 
   <footer>
-    <p>Last updated: March 14, 2026</p>
+    <p>Last updated: March 17, 2026</p>
     <p>&copy; 2026 moneasy</p>
   </footer>
 </body>

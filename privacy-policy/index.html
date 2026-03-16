@@ -90,14 +90,32 @@
   </ul>
   <p>送信先：Google Cloud Functions（アプリ管理用インフラ）<br>目的：バグ修正とアプリ品質改善のみに使用します。第三者への販売・共有は行いません。</p>
 
-  <h2>3. AI処理について</h2>
-  <p>本アプリのPro機能では、以下のAI処理を行います：</p>
+  <h2>3. AI処理と第三者へのデータ送信</h2>
+  <p>本アプリのAI機能では、テキストデータを以下の第三者AIサービスに送信します。AI機能の利用にはアプリ内での事前同意が必要です。</p>
+
+  <p><strong>送信先：</strong></p>
   <ul>
-    <li><strong>レシートOCR：</strong>レシート画像からテキストを抽出し、支出情報を構造化するためにGoogle Gemini Flash APIに送信されます。画像データはAPIでの処理のみに使用され、Googleに保存されることはありません。</li>
-    <li><strong>音声入力：</strong>音声から変換されたテキストデータを、支出情報を構造化するためにAI APIに送信します。音声データそのものは送信されません。</li>
-    <li><strong>AI月次レポート・カテゴリ推論：</strong>支出の概要データ（金額・カテゴリ名）をAI APIに送信し、分析結果を生成します。</li>
+    <li><strong>Google LLC（Gemini API）</strong>— 主要なテキスト解析処理に使用（<a href="https://policies.google.com/privacy">Google プライバシーポリシー</a>）</li>
+    <li><strong>Anthropic PBC（Claude API）</strong>— テキスト解析のバックアップ処理に使用（<a href="https://www.anthropic.com/privacy">Anthropic プライバシーポリシー</a>）</li>
   </ul>
-  <p>いずれの場合も、お名前・連絡先・住所などの個人を特定できる情報は送信されません。</p>
+
+  <p><strong>送信されるデータ：</strong></p>
+  <ul>
+    <li>レシートから読み取ったテキスト（金額・品目・店名）— 画像そのものは送信されません</li>
+    <li>音声入力から変換されたテキスト — 音声データそのものは送信されません</li>
+    <li>カテゴリ推定に使用する店名・品目名</li>
+    <li>月次レポート生成のための支出概要データ（金額・カテゴリ名）</li>
+  </ul>
+
+  <p><strong>送信されないデータ：</strong></p>
+  <ul>
+    <li>レシート画像（テキスト抽出はデバイス上のApple Vision Frameworkで実行）</li>
+    <li>音声データ（文字変換はデバイス上のApple Speech Frameworkで実行）</li>
+    <li>お名前・連絡先・住所・銀行口座などの個人を特定できる情報</li>
+    <li>過去の支出履歴や資産情報</li>
+  </ul>
+
+  <p>送信されたデータは支出情報の構造化（金額・カテゴリ・店名の抽出）のみに使用されます。Google・Anthropicがデータを保存・学習に利用することはありません。</p>
 
   <h2>4. iCloud同期</h2>
   <p>本アプリはApple CloudKitを使用して、ユーザーのiCloudアカウント間でデータを同期します。これはオプション機能であり、iCloudの設定からいつでも無効にできます。</p>
@@ -106,7 +124,7 @@
   <h2>5. 第三者への提供</h2>
   <p>ユーザーのデータを第三者に販売・提供することはありません。ただし、以下の場合を除きます：</p>
   <ul>
-    <li>AI処理に必要なデータの送信（Google Gemini Flash API）</li>
+    <li>AI処理に必要なテキストデータの送信（Google LLC Gemini API、Anthropic PBC Claude API）</li>
     <li>エラーレポートの送信（Google Cloud Functions）</li>
     <li>iCloud同期（Apple CloudKit）</li>
     <li>法令に基づく開示要求があった場合</li>
@@ -142,7 +160,7 @@
   <p>メール：<a href="mailto:moneasy@sss3yai.com">moneasy@sss3yai.com</a></p>
 
   <footer>
-    <p>最終更新日：2026年3月14日</p>
+    <p>最終更新日：2026年3月17日</p>
     <p>&copy; 2026 moneasy</p>
   </footer>
 </body>
